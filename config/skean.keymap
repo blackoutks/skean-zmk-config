@@ -42,10 +42,10 @@
                 default_layer {
                         display-name = "MAIN";
 // -----------------------------------------------------------------------------------------
-// |  ]   |   Q    |   W    |   E   |   R   |  T  |   |  Y  |   U   |   I   |    O   |    P   | [ |
-// | CAPS | SHFT/A | CTRL/S | ALT/D | GUI/F |  G  |   |  H  | GUI/J | ALT/K | CTRL/L | SHFT/; | ' |
-// |  ~   |   Z    |   X    |   C   |   V   |  B  |   |  N  |   M   |   ,   |    .   |    /   | \ |
-//                 | NAV/TAB | SHFT/SPC | SYM/RET |   | SYM/ESC | SHFT/BKSP |  NAV/DEL |
+// |  ]   |   Q    |   W    |   E     |   R      |  T      |   |  Y      |   U       |   I     |    O   |    P   | [ |
+// | CAPS | SHFT/A | CTRL/S | ALT/D   | GUI/F    |  G      |   |  H      | GUI/J     | ALT/K   | CTRL/L | SHFT/; | ' |
+// |  ~   |   Z    |   X    |   C     |   V      |  B      |   |  N      |   M       |   ,     |    .   |    /   | \ |
+//                          | NAV/TAB | SHFT/SPC | SYM/RET |   | SYM/ESC | SHFT/BKSP | NAV/DEL |
 // -----------------------------------------------------------------------------------------
                         bindings = <
    &kp RBKT  &kp Q       &kp W       &kp E      &kp R      &kp T        &kp Y &kp U      &kp I      &kp O       &kp P          &kp LBKT
@@ -87,16 +87,16 @@
                 numpad_layer {
                         display-name = "NUM";
 // -----------------------------------------------------------------------------------------
-// | --- | ---  | PSCRN | SLCK | PAUS | --- |   |  +  |  7  |  8  |  9  |  *  | --- |
-// | --- | SHFT | CTRL  | ALT  | GUI  | --- |   |  -  |  4  |  5  |  6  |  /  |  =  |
-// | --- | ---  | MUT   | VOLD | VOLU | --- |   |  0  |  1  |  2  |  3  |  .  | --- |
-//                      |      |      | ADJ |   | ADJ |     |     |
+// | --- | SHFT+GUI+5 | SHFT+CTRL+GUI+4 | SHFT+ALT+SLCK | SHFT+ALT+PAUS | --- |   |  +  |  7  |  8  |  9  |  *  | --- |
+// | --- | SHFT       | CTRL            | ALT           | GUI           | --- |   |  -  |  4  |  5  |  6  |  /  |  =  |
+// | --- | ---        | MUT             | SHFT+ALT+VOLD | SHFT+ALT+VOLU | --- |   |  0  |  1  |  2  |  3  |  .  | --- |
+//                                      |               |               | ADJ |   | ADJ |     |     |
 // -----------------------------------------------------------------------------------------
                         bindings = <
-   &none &none     &kp PSCRN  &kp SLCK     &kp PAUSE_BREAK &none        &kp KP_PLUS  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MULTIPLY &kp KP_NUM
-   &none &kp LSHFT &kp LCTRL  &kp LALT     &kp LGUI        &none        &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_SLASH    &kp KP_EQUAL
-   &none &none     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP    &none        &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT      &none
-                              &trans       &trans          &trans       &trans       &trans    &trans
+   &none &kp LS(LG(5)) &kp LS(LC(LG(4))) &kp LS(LA(SLCK))     &kp LS(LA(PAUSE_BREAK)) &none        &kp KP_PLUS  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MULTIPLY &kp KP_NUM
+   &none &kp LSHFT     &kp LCTRL         &kp LALT             &kp LGUI                &none        &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_SLASH    &kp KP_EQUAL
+   &none &none         &kp C_MUTE        &kp LS(LA(C_VOL_DN)) &kp LS(LA(C_VOL_UP))    &none        &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT      &none
+                                         &trans               &trans                  &trans       &trans       &trans    &trans
                         >;
                 };
                 adjust_layer {
