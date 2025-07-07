@@ -26,8 +26,12 @@
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        tri_layer_1 {
             if-layers = <SYM NUM>;
+            then-layer = <ADJ>;
+        };
+        tri_layer_2 {
+            if-layers = <NUM NAV>;
             then-layer = <ADJ>;
         };
     };
