@@ -87,16 +87,16 @@
                 numpad_layer {
                         display-name = "NUM";
 // -----------------------------------------------------------------------------------------
-// | --- | SHFT+GUI+5 | SHFT+CTRL+GUI+4 | SHFT+ALT+BRID | SHFT+ALT+BRIU | --- |   |  +  |   7   |   8   |   9    |    *    | --- |
-// | --- | SHFT       | CTRL            | ALT           | GUI           | --- |   |  -  | GUI/4 | ALT/5 | CTRL/6 | SHFT/ / |  =  |
-// | --- | ---        | MUT             | SHFT+ALT+VOLD | SHFT+ALT+VOLU | --- |   |  0  |   1   |   2   |   3    |    .    | --- |
-//                                      |               |               | ADJ |   | ADJ |       |       |
+// | --- | BRID | SHFT+ALT+BRID | SHFT+ALT+BRIU | BRIU | SHFT+GUI+5      |   |  +  |   7   |   8   |   9    |    *    | --- |
+// | --- | SHFT | CTRL          | ALT           | GUI  | SHFT+CTRL+GUI+4 |   |  -  | GUI/4 | ALT/5 | CTRL/6 | SHFT/ / |  =  |
+// | MUT | VOLD | SHFT+ALT+VOLD | SHFT+ALT+VOLU | VOLU | ---             |   |  0  |   1   |   2   |   3    |    .    | --- |
+//                              |               |      | ADJ             |   | ADJ |       |       |
 // -----------------------------------------------------------------------------------------
                         bindings = <
-   &none &kp LS(LG(N5)) &kp LS(LC(LG(N4))) &kp LS(LA(C_BRI_DN)) &kp LS(LA(C_BRI_UP)) &none        &kp KP_PLUS  &kp KP_N7      &kp KP_N8      &kp KP_N9       &kp KP_MULTIPLY    &none
-   &none &kp LSHFT      &kp LCTRL          &kp LALT             &kp LGUI             &none        &kp KP_MINUS &mt RGUI KP_N4 &mt RALT KP_N5 &mt RCTRL KP_N6 &mt RSHFT KP_SLASH &kp KP_EQUAL
-   &none &none          &kp C_MUTE         &kp LS(LA(C_VOL_DN)) &kp LS(LA(C_VOL_UP)) &none        &kp KP_N0    &kp KP_N1      &kp KP_N2      &kp KP_N3       &kp KP_DOT         &none
-                                           &trans               &trans               &trans       &trans       &trans         &trans
+   &none      &kp C_BRI_DN &kp LS(LA(C_BRI_DN)) &kp LS(LA(C_BRI_UP)) &kp C_BRI_UP &kp LS(LG(N5))          &kp KP_PLUS  &kp KP_N7      &kp KP_N8      &kp KP_N9       &kp KP_MULTIPLY    &none
+   &none      &kp LSHFT    &kp LCTRL            &kp LALT             &kp LGUI     &kp LS(LC(LG(N4)))      &kp KP_MINUS &mt RGUI KP_N4 &mt RALT KP_N5 &mt RCTRL KP_N6 &mt RSHFT KP_SLASH &kp KP_EQUAL
+   &kp C_MUTE &kp C_VOL_DN &kp LS(LA(C_VOL_DN)) &kp LS(LA(C_VOL_UP)) &kp C_VOL_UP &none                   &kp KP_N0    &kp KP_N1      &kp KP_N2      &kp KP_N3       &kp KP_DOT         &none
+                                                &trans               &trans       &trans                  &trans       &trans         &trans
                         >;
                 };
                 adjust_layer {
