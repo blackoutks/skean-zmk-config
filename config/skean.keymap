@@ -46,6 +46,7 @@
             quick-tap-ms = <220>;
             bindings = <&kp>, <&kp>;
         };
+    };
 };
 
 / {
