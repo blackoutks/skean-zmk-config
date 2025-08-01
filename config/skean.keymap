@@ -52,7 +52,7 @@
             then-layer = <ADJ>;
         };
     };
-}
+};
 
 / {
     macros {
@@ -62,7 +62,7 @@
             bindings = <&kp LA(F1) &kp N1>;
         };
     };
-}
+};
 
 / {
     behaviors {
@@ -90,7 +90,7 @@
             hold-trigger-on-release;
         };
     };
-}
+};
 
 / {
     keymap {
