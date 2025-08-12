@@ -112,15 +112,15 @@
         navigation_layer {
             display-name = "NAV";
 // -----------------------------------------------------------------------------------------
-// | GUI  | GUI+Q      | GUI+W      | GUI+E     | GUI+R     | GUI+T |   |   ---    | HOME         | PGDN     | PGUP      | END           | INS       |
-// | ALT  | SHFT/GUI+A | CTRL/GUI+S | ALT/GUI+D | GUI/GUI+F | ---   |   | ALT+LEFT | LEFT         | DOWN     | UP        | RIGHT         | ALT+RIGHT |
-// | SHFT | GUI+Z      | GUI+X      | GUI+C     | GUI+V     | GUI+B |   |   ---    | GUI+ALT+LEFT | GUI+LEFT | GUI+RIGHT | GUI+ALT+RIGHT |    ---    |
-//                                  |           |           | ADJ   |   | ADJ      |              |          |
+// | GUI  | GUI+Q      | GUI+W      | GUI+E     | GUI+R     | GUI+T |   | ---      | GUI+LEFT     | PGDN | PGUP | GUI+RIGHT     | INS       |
+// | ALT  | SHFT/GUI+A | CTRL/GUI+S | ALT/GUI+D | GUI/GUI+F | ---   |   | ALT+LEFT | LEFT         | DOWN | UP   | RIGHT         | ALT+RIGHT |
+// | SHFT | GUI+Z      | GUI+X      | GUI+C     | GUI+V     | GUI+B |   | ---      | ALT+GUI+LEFT | HOME | END  | ALT+GUI+RIGHT | ---       |
+//                                  |           |           | ADJ   |   | ADJ      |              |      |
 // -----------------------------------------------------------------------------------------
             bindings = <
-    &kp LGUI  &kp LG(Q)       &kp LG(W)       &kp LG(E)      &kp LG(R)      &kp LG(T)        &none        &kp HOME         &kp PG_DN    &kp PG_UP     &kp END           &kp INS
-    &kp LALT  &mt LSHFT LG(A) &mt LCTRL LG(S) &mt LALT LG(D) &mt LGUI LG(F) &none            &kp LA(LEFT) &kp LEFT         &kp DOWN     &kp UP        &kp RIGHT         &kp LA(RIGHT)
-    &kp LSHFT &kp LG(Z)       &kp LG(X)       &kp LG(C)      &kp LG(V)      &kp LG(B)        &none        &kp LG(LA(LEFT)) &kp LG(LEFT) &kp LG(RIGHT) &kp LG(LA(RIGHT)) &none
+    &kp LGUI  &kp LG(Q)       &kp LG(W)       &kp LG(E)      &kp LG(R)      &kp LG(T)        &none        &kp LG(LEFT)     &kp PG_DN &kp PG_UP &kp LG(RIGHT)     &kp INS
+    &kp LALT  &mt LSHFT LG(A) &mt LCTRL LG(S) &mt LALT LG(D) &mt LGUI LG(F) &none            &kp LA(LEFT) &kp LEFT         &kp DOWN  &kp UP    &kp RIGHT         &kp LA(RIGHT)
+    &kp LSHFT &kp LG(Z)       &kp LG(X)       &kp LG(C)      &kp LG(V)      &kp LG(B)        &none        &kp LA(LG(LEFT)) &kp HOME  &kp END   &kp LA(LG(RIGHT)) &none
                                               &trans         &trans         &trans           &trans       &trans           &trans
             >;
         };
@@ -128,16 +128,16 @@
         idea_layer {
             display-name = "IDE";
 // -----------------------------------------------------------------------------------------
-// | --- | ALT+F1,1 | GUI+F2 | ---   | ---   | ---   |   | GUI+F6 | ---   | GUI+F8 | ---   | ---   | GUI+F12      |
-// | --- | GUI+1    | GUI+2  | GUI+3 | GUI+4 | GUI+5 |   | GUI+6  | GUI+7 | GUI+8  | GUI+9 | GUI+0 | SHFT+GUI+F12 |
-// | --- | ---      | ---    | ---   | ---   | ---   |   | ---    | ---   | ---    | ---   | ---   | ALT+F12      |
-//                           |       |       | ADJ   |   | ADJ    |       |        |
+// | --- | ALT+F1,1 | GUI+F2 | ---   | ---         | ---       |   | GUI+F6 | ---   | GUI+F8 | SHFT+GUI+F8 | ---   | GUI+F12      |
+// | --- | GUI+1    | GUI+2  | GUI+3 | GUI+4       | GUI+5     |   | GUI+6  | GUI+7 | GUI+8  | GUI+9       | GUI+0 | SHFT+GUI+F12 |
+// | --- | ---      | ---    | ---   | SHFT+CTRL+B | ALT+GUI+B |   | ---    | ---   | ---    | ---         | ---   | ALT+F12      |
+//                           |       |             | ADJ       |   | ADJ    |       |        |
 // -----------------------------------------------------------------------------------------
             bindings = <
-    &none &idea_go_to_file &kp LG(F2) &none      &none      &none             &kp LS(F6) &none      &kp LG(F8) &none      &none      &kp LG(F12)
-    &none &kp LG(N1)       &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)        &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0) &kp LS(LG(F12))
-    &none &none            &none      &none      &none      &none             &none      &none      &none      &none      &none      &kp LA(F12)
-                                      &trans     &trans     &trans            &trans     &trans     &trans
+    &none &idea_go_to_file &kp LG(F2) &none      &none         &none                &kp LS(F6) &none      &kp LG(F8) &kp LS(LG(F8)) &none      &kp LG(F12)
+    &none &kp LG(N1)       &kp LG(N2) &kp LG(N3) &kp LG(N4)    &kp LG(N5)           &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9)     &kp LG(N0) &kp LS(LG(F12))
+    &none &none            &none      &none      &kp LS(LC(B)) &kp LA(LG(B))        &none      &none      &none      &none          &none      &kp LA(F12)
+                                      &trans     &trans        &trans               &trans     &trans     &trans
             >;
         };
 
